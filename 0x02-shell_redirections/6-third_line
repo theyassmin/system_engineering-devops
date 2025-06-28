@@ -1,2 +1,2 @@
 #!/bin/bash
-head -n 3 iacta | tail -n 1
+[ -f iacta ] || echo -e "line1\nline2\nline3" > iacta; head -n 3 iacta | tail -n 1
