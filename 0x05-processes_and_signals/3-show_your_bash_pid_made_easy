@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
-# Retrieves bash PIDs using a more direct method
-cat /proc/*/comm 2>/dev/null | grep -wn bash | cut -d: -f1 | xargs -I{} basename $(dirname {}) | xargs -I{} echo "{} bash"
+# Displays the PID and process name of processes containing the word bash
+pgrep -f bash | xargs -I{} echo "{} bash"
