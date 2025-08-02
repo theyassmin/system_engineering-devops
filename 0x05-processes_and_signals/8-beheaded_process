@@ -1,3 +1,5 @@
 #!/usr/bin/env bash
-# Force kills the highlander script from task 7
-kill -9 $(pgrep -f 7-highlander)
+# Kills all processes matching 7-highlander
+for pid in $(pgrep -f 7-highlander); do
+  kill -9 "$pid"
+done
